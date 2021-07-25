@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <style>
+    body {
+      background: #1e1e1e;
+    }
+  </style>
+
+  <title> JarvisCHAT-BOT</title>
+</head>
+
+<body class=" text-white">
+  <div class="container text-center">
+    <img src="chatbot.jpg" alt="" class="mb-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <form class="mb-5">
+          <div class="form-group">
+            <textarea name="" id="text-input" class="form-control form-control-lg" placeholder="Type anything..."></textarea>
+          </div>
+          <div class="form-group">
+              <label for="rate">Rate</label>
+              <div id="rate-value" class="badge badge-primary float-right">1</div>
+              <input type="range" id="rate" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+          </div>
+          <div class="form-group">
+            <label for="rate">Pitch</label>
+            <div id="pitch-value" class="badge badge-primary float-right">1</div>
+            <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
+        </div>
+        <div class="form-group">
+            <select id="voice-select" class="form-control form-control-lg"></select>
+          </div>
+          <button class="btn btn-light btn-lg btn-block">Speak It</button> 
+           <!-- <div class="form-group"> 
+            <label for="rate">Rate</label>
+            <div id="rate-value" class="badge badge-primary float-right">1</div>
+            <input type="range" id="rate" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+          </div>
+          <div class="form-group">
+            <label for="pitch">Pitch</label>
+            <div id="pitch-value" class="badge badge-primary float-right">1</div>
+            <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
+          </div>
+          <div class="form-group">
+            <select id="voice-select" class="form-control form-control-lg"></select>
+          </div>
+          <button class="btn btn-light btn-lg btn-block">Speak It</button> -->
+        </form>
+        <button class="btn btn-primary btn-lg btn-block mb-5">Speak ,the bot is going to write..</button> 
+        <button class="btn btn-light btn -lg btn-block" id="b1" onclick="recognition.start()"> Press it and speak...
+          <p class='float-right'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+            <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"></path>
+            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"></path>
+          </svg> </p></button>
+        
+        <div class="form-group my-4">
+          <textarea name="" id="result" class="form-control form-control-lg" placeholder="it will write what u speak.."></textarea>
+        </div>
+         
+        <!-- <p class="text-secondary"> Note: This app uses the Web Speech API which is experimental and may not fully work in some versions of certain browsers</p> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/voice.js"></script>
+
+</body>
+
+</html>
